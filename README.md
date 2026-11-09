@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Android%20TV%20%2F%20Google%20TV-3ddc84)](docs/DEVICE-SUPPORT.md)
 [![Tested devices](https://img.shields.io/badge/tested%20devices-1-orange)](docs/DEVICE-SUPPORT.md)
-[![CI](https://github.com/andrewsavio/aurora-tv-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/andrewsavio/aurora-tv-toolkit/actions/workflows/ci.yml)
+[![CI](https://github.com/andrewsavio/tv-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/andrewsavio/tv-toolkit/actions/workflows/ci.yml)
 
 ![Aurora Home](docs/img/aurora-home.png)
 
@@ -106,7 +106,7 @@ Summary (full matrix in [docs/DEVICE-SUPPORT.md](docs/DEVICE-SUPPORT.md)):
 | Fire TV (Fire OS, Android based) | Untested. Package names differ; expect a new profile |
 | Samsung (Tizen), LG (webOS), most Hisense VIDAA models | **Not supported.** Different operating systems and tools. See [docs/SAMSUNG-AND-OTHER-PLATFORMS.md](docs/SAMSUNG-AND-OTHER-PLATFORMS.md) |
 
-If your device is not listed, run `detect` and `plan`, then open a [device-support issue](https://github.com/andrewsavio/aurora-tv-toolkit/issues/new/choose). A report with your model and output is the most useful contribution you can make.
+If your device is not listed, run `detect` and `plan`, then open a [device-support issue](https://github.com/andrewsavio/tv-toolkit/issues/new/choose). A report with your model and output is the most useful contribution you can make.
 
 ## Features
 
@@ -165,9 +165,9 @@ To use them with Claude Code, copy the folders into `~/.claude/skills/`.
 
 Contributions are welcome, especially device reports. Please read [CONTRIBUTING.md](CONTRIBUTING.md) first. In short: test with `plan` before `apply`, never commit vendor binaries or keys, and keep changes reversible.
 
-- Found a bug? Use the [bug report](https://github.com/andrewsavio/aurora-tv-toolkit/issues/new?template=bug_report.yml).
-- Have a TV we don't support? Use the [device-support form](https://github.com/andrewsavio/aurora-tv-toolkit/issues/new?template=device_support.yml).
-- Want a change? Open a [feature request](https://github.com/andrewsavio/aurora-tv-toolkit/issues/new?template=feature_request.yml) or send a pull request with the [template](.github/PULL_REQUEST_TEMPLATE.md).
+- Found a bug? Use the [bug report](https://github.com/andrewsavio/tv-toolkit/issues/new?template=bug_report.yml).
+- Have a TV we don't support? Use the [device-support form](https://github.com/andrewsavio/tv-toolkit/issues/new?template=device_support.yml).
+- Want a change? Open a [feature request](https://github.com/andrewsavio/tv-toolkit/issues/new?template=feature_request.yml) or send a pull request with the [template](.github/PULL_REQUEST_TEMPLATE.md).
 - Security problem? See [SECURITY.md](SECURITY.md). Please do not open a public issue for it.
 
 ## Roadmap

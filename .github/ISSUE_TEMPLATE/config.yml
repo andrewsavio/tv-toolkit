@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Security problem (private)
-    url: https://github.com/andrewsavio/aurora-tv-toolkit/security/advisories/new
+    url: https://github.com/andrewsavio/tv-toolkit/security/advisories/new
     about: Report vulnerabilities privately. Do not open a public issue for them.
   - name: Questions and ideas
-    url: https://github.com/andrewsavio/aurora-tv-toolkit/discussions
+    url: https://github.com/andrewsavio/tv-toolkit/discussions
     about: Ask how something works, or share a setup, before opening an issue.
