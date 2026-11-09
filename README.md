@@ -36,7 +36,7 @@ Most Android TVs ship with preinstalled apps, background services, telemetry and
 
 | Part | What it does | Status |
 |---|---|---|
-| [`tools/tvkit.ps1`](tools/tvkit.ps1) | One command-line tool: detect, status, plan, apply, undo, RAM report, privacy audit, boot timing | v0.1.0, read paths tested on hardware |
+| [`tools/tvkit.ps1`](tools/tvkit.ps1) | One command-line tool: detect, status, plan, apply, undo, RAM report, privacy audit, boot timing | v0.1.0. Not yet run against a TV; see the CHANGELOG |
 | [`launcher/`](launcher) | **Aurora Home**: a light home screen with status chips, a dropdown for inputs and Wi-Fi, auto Free RAM, and a remote-button service | Tested on hardware |
 | [`player/`](player) | Our own video, audio and photo player on Media3 ExoPlayer: named tracks, remembered choices, Continue Watching, Live TV, Dolby pass-through badge | Tested on hardware (see [Known limits](#known-limits)) |
 | [`profiles/`](profiles) | Per-device rules. `generic-androidtv` is safe for any Android TV. `tcl-beyondtv2` is tested | Add your own with a pull request |
