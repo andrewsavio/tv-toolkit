@@ -1,0 +1,15 @@
+{
+  "comment": "Libraries the player compiles against. Each download is checked against its SHA-256 before use. The libraries are Apache-2.0 and are downloaded at build time, not stored in this repo.",
+  "libraries": [
+    { "name": "media3-common", "type": "aar", "url": "https://dl.google.com/android/maven2/androidx/media3/media3-common/1.4.1/media3-common-1.4.1.aar", "sha256": "973e5e7b0ecf8e6c8cd825cab35145b84c56020af7c3ec52815e595ef71baa16" },
+    { "name": "media3-container", "type": "aar", "url": "https://dl.google.com/android/maven2/androidx/media3/media3-container/1.4.1/media3-container-1.4.1.aar", "sha256": "65b6d22c96dfb5ce76754b08f5b004ee0dbdbe60793c5eab9f95c1f54f95f4b0" },
+    { "name": "media3-database", "type": "aar", "url": "https://dl.google.com/android/maven2/androidx/media3/media3-database/1.4.1/media3-database-1.4.1.aar", "sha256": "2170ae6448cd499fc570dafa81e5687ad813995b7c2b7ff6801acaaa9a88bb4a" },
+    { "name": "media3-datasource", "type": "aar", "url": "https://dl.google.com/android/maven2/androidx/media3/media3-datasource/1.4.1/media3-datasource-1.4.1.aar", "sha256": "1c0bb41ee88a6bfaf24720bbfe2d29a033abad21c30e0921efbdce6c1fa28842" },
+    { "name": "media3-decoder", "type": "aar", "url": "https://dl.google.com/android/maven2/androidx/media3/media3-decoder/1.4.1/media3-decoder-1.4.1.aar", "sha256": "f7d97c5a39dca3c3c21bc8a70145d931d8633ed0dae89198c370e7b7e3c3f183" },
+    { "name": "media3-extractor", "type": "aar", "url": "https://dl.google.com/android/maven2/androidx/media3/media3-extractor/1.4.1/media3-extractor-1.4.1.aar", "sha256": "1f51e4633e1e6137f0a4b80552afc399e269208b700352f96543d4513be6bf28" },
+    { "name": "media3-exoplayer", "type": "aar", "url": "https://dl.google.com/android/maven2/androidx/media3/media3-exoplayer/1.4.1/media3-exoplayer-1.4.1.aar", "sha256": "66cd0f99209191660823d32c8fc329e383a8a7ff33e0d676632387361abcba70" },
+    { "name": "media3-exoplayer-hls", "type": "aar", "url": "https://dl.google.com/android/maven2/androidx/media3/media3-exoplayer-hls/1.4.1/media3-exoplayer-hls-1.4.1.aar", "sha256": "43546b6b2ef0c2816f5d3af181c2179a5c1bddb9df85b7b84b3428cd37c887de" },
+    { "name": "guava", "type": "jar", "url": "https://repo1.maven.org/maven2/com/google/guava/guava/33.0.0-android/guava-33.0.0-android.jar", "sha256": "640535014a304c50221abad19d6b22a096f13119c7c447a655cc1e009a32208d" },
+    { "name": "failureaccess", "type": "jar", "url": "https://repo1.maven.org/maven2/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar", "sha256": "8a8f81cf9b359e3f6dfa691a1e776985c061ef2f223c9b2c80753e1b458e8064" }
+  ]
+}

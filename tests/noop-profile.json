@@ -1,0 +1,14 @@
+{
+  "name": "test-noop",
+  "status": "test",
+  "description": "Test profile: sets a setting to the value it already has, so applying and undoing it changes nothing visible. Used to test the journal and undo.",
+  "match": { "brand": "^$", "model": "^$" },
+  "vendor_prefixes": [],
+  "packages_disable": [],
+  "background_restrict": [],
+  "jobs_cancel": [],
+  "settings": [
+    { "ns": "global", "key": "window_animation_scale", "value": "1.0", "group": "safe", "why": "Test: writes the current value back." }
+  ],
+  "dns": null
+}

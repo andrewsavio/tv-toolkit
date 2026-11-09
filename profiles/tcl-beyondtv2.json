@@ -1,0 +1,40 @@
+{
+  "name": "tcl-beyondtv2",
+  "status": "tested",
+  "description": "TCL BeyondTV2 (Android TV 11, firmware AR05, 2 GB RAM). Tested end to end by the author on a real device.",
+  "match": { "brand": "^TCL$", "model": "^BeyondTV" },
+  "vendor_prefixes": ["com.tcl.", "uk.co.freeview."],
+  "packages_disable": [
+    { "pkg": "com.tcl.smartalexa", "group": "safe", "why": "Alexa voice service, about 18 MB of RAM. Skip it if you use Alexa." },
+    { "pkg": "com.tcl.miracast", "group": "safe", "why": "Miracast screen-mirroring receiver, about 6 MB. Google Cast is separate." },
+    { "pkg": "com.android.se", "group": "safe", "why": "Secure Element service. A TV has no NFC chip for it to serve, about 10 MB." },
+    { "pkg": "com.tcl.autopair", "group": "optional", "why": "Auto-pairs the TCL Bluetooth remote. Only disable it if you do not use that remote." },
+    { "pkg": "com.google.android.tv.remote.service", "group": "optional", "why": "Serves the Android TV Remote phone app. Only disable it if you do not use the phone remote." }
+  ],
+  "background_restrict": [
+    { "pkg": "com.netflix.ninja", "group": "safe", "why": "Stops Netflix starting itself at power-on. It still opens normally." },
+    { "pkg": "com.amazon.amazonvideo.livingroom", "group": "safe", "why": "Stops Prime Video starting itself at power-on." },
+    { "pkg": "in.startv.hotstar", "group": "safe", "why": "Stops JioHotstar starting itself at power-on." },
+    { "pkg": "com.google.android.youtube.tv", "group": "safe", "why": "Stops YouTube and its recommendations starting itself." },
+    { "pkg": "com.google.android.videos", "group": "safe", "why": "Stops Google Play Movies starting itself at power-on." },
+    { "pkg": "com.google.android.play.games", "group": "safe", "why": "Stops Google Play Games starting itself at power-on." },
+    { "pkg": "com.tcl.MultiScreenInteraction_TV", "group": "safe", "why": "TCL's phone-to-TV interaction service; it restarts at power-on." }
+  ],
+  "jobs_cancel": [
+    { "pkg": "com.google.android.youtube.tv", "id": 1, "group": "safe", "why": "YouTube's recommendations job. It comes back if you open YouTube again." }
+  ],
+  "settings": [
+    { "ns": "global", "key": "window_animation_scale", "value": "0.5", "group": "optional", "why": "Half-length window animations, so menus feel quicker." },
+    { "ns": "global", "key": "transition_animation_scale", "value": "0.5", "group": "optional", "why": "Half-length screen transitions." },
+    { "ns": "global", "key": "animator_duration_scale", "value": "0.5", "group": "optional", "why": "Half-length property animations." }
+  ],
+  "dns": {
+    "host": "dns.adguard-dns.com",
+    "group": "optional",
+    "why": "Encrypted DNS that blocks ads and trackers for the whole TV. Needs TCP 853 open on your router. Undo if apps stop loading."
+  },
+  "notes": [
+    "The 'safe' group only disables apps you do not need to watch TV, and only background-starts the streaming apps.",
+    "TCL's own service apps (TGuard, the TV input, the key service) are not listed. Removing them breaks TCL features."
+  ]
+}

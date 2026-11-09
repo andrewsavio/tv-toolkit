@@ -1,0 +1,30 @@
+! TCL BeyondTV2 block list (AdGuard Home / AdGuard DNS "custom rules" syntax)
+! Built from the web addresses found inside your TV's own TCL apps (REA audit, 5 Nov 2026).
+! Add it in AdGuard Home > Filters > DNS blocklists > Add a custom list, or paste under Custom filtering rules.
+! Start with TIER 1 only. If something you use stops working, remove the last rule you added.
+!
+! ---- TIER 1: registration, "user center", privacy and device-management servers (safe to block) ----
+||leiniao.com^
+||my7v.com^
+||huan.tv^
+||huantest.com^
+||cedock.com^
+||tcloudfamily.com^
+||tcllauncher.com^
+!
+! ---- TIER 2: TCL remote configuration (the TV keeps working; TCL can no longer push settings) ----
+||tclking.com^
+!
+! ---- TIER 3: optional; blocking these can remove TCL's own TV guide, store links or vendor pages ----
+||ffalcon.com.vn^
+||cloudepg.net^
+!
+! Exact names seen inside the apps (already covered by the rules above):
+!   hwlauncher-o.api.leiniao.com      hwtvmanage-o.api.leiniao.com   hwprivacy-o.api.leiniao.com
+!   hwbaodan-o.api.leiniao.com        hwpreins-t.api.my7v.com        hwtvmanage-t.api.my7v.com
+!   testoverseabaodan.api.my7v.com    on-overseabaodan.api.my7v.com  testtcast.api.my7v.com
+!   eu-filter-uc.huan.tv  na-filter-uc.huan.tv  as-filter-uc.huan.tv  filter-uctest.huan.tv  uc.huantest.com
+!   eu-newuser-tcl.cedock.com  na-tvuser-tcl.cedock.com  as-tvuser-tcl.cedock.com
+!   europe.tcllauncher.com  test.tcllauncher.tcloudfamily.com
+!   ipcs.tclking.com  testipcs.tclking.com
+!   sunway.global.interface.cloudepg.net  www.ffalcon.com.vn

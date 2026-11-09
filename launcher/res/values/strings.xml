@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="keymap_desc">Makes the T button on the remote open Live TV. It only looks at that one button; it reads nothing from the screen.</string>
+</resources>

@@ -1,0 +1,21 @@
+{
+  "name": "generic-androidtv",
+  "status": "generic",
+  "description": "Conservative defaults for any Android TV or Google TV device. It removes no packages, changes no system setting, and only limits background work for common streaming apps.",
+  "match": { "brand": ".*", "model": ".*" },
+  "vendor_prefixes": [],
+  "packages_disable": [],
+  "background_restrict": [
+    { "pkg": "com.netflix.ninja", "group": "safe", "why": "Stops the streaming app from starting itself at power-on or running while you use something else. It still opens normally." },
+    { "pkg": "com.amazon.amazonvideo.livingroom", "group": "safe", "why": "Same as above for Prime Video." },
+    { "pkg": "in.startv.hotstar", "group": "safe", "why": "Same as above for JioHotstar." },
+    { "pkg": "com.google.android.youtube.tv", "group": "safe", "why": "Same as above for YouTube, including its recommendations service." }
+  ],
+  "jobs_cancel": [],
+  "settings": [],
+  "dns": null,
+  "notes": [
+    "Generic profile: nothing here has been tested on a particular model. Run 'plan' first and read every line.",
+    "Android 11 does not let adb disable another app's boot receiver. Background restriction is the supported way to stop auto-start."
+  ]
+}

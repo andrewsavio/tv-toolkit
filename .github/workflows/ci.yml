@@ -1,0 +1,49 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  scripts-and-profiles:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Parse every PowerShell script
+        shell: pwsh
+        run: |
+          $failed = $false
+          Get-ChildItem -Recurse -Include *.ps1 | ForEach-Object {
+            $tokens = $null
+            $errors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$tokens, [ref]$errors) | Out-Null
+            foreach ($e in $errors) {
+              $failed = $true
+              Write-Host "::error file=$($_.FullName),line=$($e.Extent.StartLineNumber)::$($e.Message)"
+            }
+          }
+          if ($failed) { exit 1 }
+
+      - name: Validate JSON and profile fields
+        shell: pwsh
+        run: |
+          $failed = $false
+          $allowed = 'tested', 'untested', 'generic', 'test'
+          Get-ChildItem -Recurse -Include *.json | ForEach-Object {
+            try {
+              $doc = Get-Content $_.FullName -Raw | ConvertFrom-Json
+              if ($_.FullName -match '[\\/]profiles[\\/]' -and $_.Name -ne 'README.md') {
+                if ($doc.status -notin $allowed) { throw "status must be one of: $($allowed -join ', ')" }
+                foreach ($list in 'packages_disable', 'background_restrict', 'jobs_cancel', 'settings') {
+                  foreach ($item in @($doc.$list | Where-Object { $_ })) {
+                    if (-not $item.why) { throw "$list item without 'why': $($item | ConvertTo-Json -Compress)" }
+                  }
+                }
+              }
+            } catch {
+              $failed = $true
+              Write-Host "::error file=$($_.FullName)::$($_.Exception.Message)"
+            }
+          }
+          if ($failed) { exit 1 }

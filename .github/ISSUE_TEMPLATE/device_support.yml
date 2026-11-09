@@ -1,0 +1,61 @@
+name: Device support report
+description: Tell us about a TV you have tried (working or not). This is the most useful report you can send.
+title: "[device] "
+labels: ["device-support"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Run `tvkit detect` and `tvkit plan` on the TV first. Remove the IP address and serial number from the output before pasting.
+  - type: dropdown
+    id: family
+    attributes:
+      label: Platform family
+      options:
+        - Android TV
+        - Google TV
+        - Fire OS
+        - Tizen (Samsung)
+        - webOS (LG)
+        - VIDAA (Hisense and others)
+        - Other / not sure
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Brand and model
+      placeholder: "Sony Bravia XR-55A80L"
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware and Android version
+      placeholder: "Android 12, security patch 2024-05"
+  - type: textarea
+    id: detect
+    attributes:
+      label: Output of `tvkit detect`
+      render: text
+  - type: textarea
+    id: plan
+    attributes:
+      label: Output of `tvkit plan`
+      description: Read it before you paste it. Remove anything personal.
+      render: text
+  - type: checkboxes
+    id: works
+    attributes:
+      label: What did you try?
+      options:
+        - label: `detect` worked.
+        - label: `plan` worked.
+        - label: `apply -Apply` worked, and I ran `undo -Apply` afterwards.
+        - label: Live TV or the player was used (see the comments).
+        - label: Nothing worked; the error is in the comments.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Errors, surprises, or what would make this device work better.

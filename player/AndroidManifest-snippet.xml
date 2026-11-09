@@ -1,0 +1,51 @@
+<!--
+  Integration snippet for the player.
+  Put the <queries> block inside <manifest>, and the activities inside <application> of the base APK you own.
+  This repo does not ship any vendor APK. See docs/METHODS.md for the integration steps.
+-->
+<queries>
+    <package android:name="org.videolan.vlc" />
+</queries>
+
+<activity
+    android:name="com.savio.mediacenter.player.PlayerActivity"
+    android:exported="false"
+    android:process=":player"
+    android:hardwareAccelerated="true"
+    android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode|navigation|layoutDirection|locale"
+    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+
+<activity
+    android:name="com.savio.mediacenter.player.LiveTvActivity"
+    android:exported="true"
+    android:label="Live TV"
+    android:process=":player"
+    android:hardwareAccelerated="true"
+    android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode|navigation|layoutDirection|locale"
+    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+    </intent-filter>
+</activity>
+
+<activity
+    android:name="com.savio.mediacenter.player.ContinueActivity"
+    android:exported="true"
+    android:label="Continue Watching"
+    android:process=":player"
+    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+</activity>
+
+<activity
+    android:name="com.savio.mediacenter.viewer.PhotoViewActivity"
+    android:exported="false"
+    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />

@@ -1,0 +1,75 @@
+name: Bug report
+description: Something in tvkit, the launcher, the player or the remote-button service is not working
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting this. Before you paste output, remove IP addresses, Wi-Fi names, serial numbers, email addresses and file names.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Which part?
+      options:
+        - tvkit (command-line tool)
+        - Aurora Home (launcher)
+        - Player (playback, tracks, Dolby)
+        - Live TV
+        - Remote buttons (T button, Hold Back)
+        - Blocklists or DNS
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The version in CHANGELOG.md, or the commit you ran.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: TV brand and model
+      placeholder: "TCL BeyondTV2"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: "The output of `tvkit detect` and `tvkit plan`, or the relevant `logcat` lines."
+      render: text
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: I ran `plan` before `apply`.
+        - label: I can run `undo -Apply` to put the device back.
+        - label: I removed personal data from what I pasted.

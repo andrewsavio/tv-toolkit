@@ -1,0 +1,27 @@
+# Same list as plain "hosts" lines (Pi-hole, router with a hosts/DNS blocklist, or a PC hosts file).
+# Hosts files cannot use wildcards, so these are the exact names found inside the TV's TCL apps.
+# Tier 1 + Tier 2 only. Tier 3 (optional) names are at the bottom, commented out.
+0.0.0.0 hwlauncher-o.api.leiniao.com
+0.0.0.0 hwtvmanage-o.api.leiniao.com
+0.0.0.0 hwprivacy-o.api.leiniao.com
+0.0.0.0 hwbaodan-o.api.leiniao.com
+0.0.0.0 hwpreins-t.api.my7v.com
+0.0.0.0 hwtvmanage-t.api.my7v.com
+0.0.0.0 testoverseabaodan.api.my7v.com
+0.0.0.0 on-overseabaodan.api.my7v.com
+0.0.0.0 testtcast.api.my7v.com
+0.0.0.0 eu-filter-uc.huan.tv
+0.0.0.0 na-filter-uc.huan.tv
+0.0.0.0 as-filter-uc.huan.tv
+0.0.0.0 filter-uctest.huan.tv
+0.0.0.0 uc.huantest.com
+0.0.0.0 eu-newuser-tcl.cedock.com
+0.0.0.0 na-tvuser-tcl.cedock.com
+0.0.0.0 as-tvuser-tcl.cedock.com
+0.0.0.0 europe.tcllauncher.com
+0.0.0.0 test.tcllauncher.tcloudfamily.com
+0.0.0.0 ipcs.tclking.com
+0.0.0.0 testipcs.tclking.com
+# Tier 3, optional:
+# 0.0.0.0 www.ffalcon.com.vn
+# 0.0.0.0 sunway.global.interface.cloudepg.net
