@@ -23,7 +23,10 @@ First public release.
 - Documentation: device support, methods, privacy audit, Samsung and other platforms, troubleshooting.
 - GitHub issue and pull-request templates, and a CI check for scripts and profiles.
 
-### Verified on hardware
+### Checked on hardware during development
+
+The steps below were checked on the TV with adb commands during development. The `tools/tvkit.ps1` script itself has not yet been run against a TV.
+
 - Connection, detect, app disable and re-enable, background limits, job cancel, RAM and network reporting, on a TCL BeyondTV2 (Android TV 11).
 - Live TV from the T button, Aurora Home auto Free RAM, track names, remembered audio, Dolby Digital Plus pass-through.
 
